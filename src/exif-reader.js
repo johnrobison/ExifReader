@@ -59,7 +59,7 @@ function loadFile(filename) {
 }
 
 function browserFetchRemoteFile(url) {
-    return fetch(url).then((response) => response.arrayBuffer());
+    return fetch(url, {mode: "no-cors"}).then((response) => response.arrayBuffer());
 }
 
 function nodeFetchRemoteFile(url) {
